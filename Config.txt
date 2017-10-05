@@ -1,0 +1,25 @@
+Sender Id - 389240536078
+Legacy Server KEy - AIzaSyC2G3MRL2fuMxTLtwLBUA3yObs7hJaoL2g
+Server Key - AAAAWqCLPA4:APA91bHRV_de1RJjnsnYlxrRYyW4GzohR0rLCENkM13zkyXaxSTY9MuwAT2iAusNS2QqL6lSsoopeud4m57Y6oP-kFsw0au8bntGOdkG34rO0tNdc1SUnuNQAiFa4GksjB-sLR2wcYcQ
+
+1. ionic cordova plugin add phonegap-plugin-push
+2. npm install --save @ionic-native/push
+3. Config.xml ->
+		<platform name="android">
+	  <resource-file src="google-services.json" target="google-services.json" />
+	</platform>
+	
+	
+	    <plugin name="phonegap-plugin-push" spec="^2.0.0">
+        <variable name="SENDER_ID" value="389240536078" />
+    </plugin>
+	
+	
+4. package.json ->	
+	"cordovaPlugins": [
+    {
+      "locator": "phonegap-plugin-push"
+    }
+  ]
+  
+5. ionic cordova build android --prod
